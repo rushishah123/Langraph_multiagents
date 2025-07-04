@@ -1,0 +1,13 @@
+llm:
+  default_model: gpt-3.5-turbo
+retry: 2
+tools:
+  search:
+    type: web_search
+steps:
+  - role: think
+    model: gpt-3.5-turbo
+  - role: search
+    tool: search
+  - role: summarize
+    model: gpt-3.5-turbo
